@@ -36,7 +36,7 @@ jobs:
 
       - name: Move file
         if: success()
-        run: mv ~/bin/sing-box ./sing-box-server
+        run: mv ~/go/bin/sing-box ./sing-box-server
 
       - name: Cache xcaddy
         if: success()
@@ -44,7 +44,7 @@ jobs:
 
       - name: Build caddy
         if: success()
-        run: ~/bin/xcaddy build --with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive --with github.com/mholt/caddy-l4 --with github.com/mastercactapus/caddy2-proxyprotocol
+        run: ~/go/bin/xcaddy build --with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive --with github.com/mholt/caddy-l4 --with github.com/mastercactapus/caddy2-proxyprotocol
 
       - name: Release
         uses: softprops/action-gh-release@v1

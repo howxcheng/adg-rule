@@ -7,7 +7,7 @@ on:
       - ".github/workflows/*"
     branches: [main]
   schedule:
-    - cron: 0 8 * * 3
+    - cron: 0 12 * * 7
   workflow_dispatch:
 
 env:
@@ -33,28 +33,14 @@ jobs:
       - name: Run Jar
         run: java -jar ./target/adg-rule-1.0.0.jar
 
-      - name: Commit Changes
-        id: commit
-        run: |
-          if [ -z "$(git status --porcelain)" ]; then 
-              exit 0
-          else
-            echo "status=success" >> $GITHUB_OUTPUT
-            git add .
-            git config --local user.email "jbc332362173@outlook.com"
-            git config --local user.name "howxcheng"
-            git commit -m "CI Updated at $(date +'%Y-%m-%d %H:%M:%S')" -a
-          fi
-
-      - name: GitHub Push
-        if: steps.commit.outputs.status == 'success' && !cancelled()
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{secrets.GITHUB_TOKEN}}
-          branch: ${{github.ref}}
-
-      # - name: Mirror Refresh
-      #   run: sleep 10 && curl 'https://purge.jsdelivr.net/gh/${{github.repository}}/rule'
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with: # 将下述可执行文件 release 上去
+          tag_name: weekly
+          files: |
+            ./rule/rules.txt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Delete Workflow Runs
         uses: Mattraks/delete-workflow-runs@v2

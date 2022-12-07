@@ -34,13 +34,17 @@ jobs:
         if: success()
         run: go install -v -tags with_quic,with_grpc github.com/sagernet/sing-box/cmd/sing-box@latest # 这 3 条是交叉编译 Go 的指令，酌情修改。
 
+      - name: Move file
+        if: success()
+        run: mv ~/bin/sing-box ./sing-box-server
+
       - name: Cache xcaddy
         if: success()
         run: go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
 
       - name: Build caddy
         if: success()
-        run: $GOPATH/bin/xcaddy build --with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive --with github.com/mholt/caddy-l4 --with github.com/mastercactapus/caddy2-proxyprotocol
+        run: ~/bin/xcaddy build --with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive --with github.com/mholt/caddy-l4 --with github.com/mastercactapus/caddy2-proxyprotocol
 
       - name: Release
         uses: softprops/action-gh-release@v1
@@ -48,7 +52,7 @@ jobs:
           tag_name: weekly
           files: |
             caddy
-            $GOPATH/bin/sing-box
+            sing-box-server
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

@@ -1,15 +1,11 @@
 name: Build Go Exec Files
 on:
   push: # 每次 push 的时候触发
-    tags:
-      - "weekly"
     paths-ignore:
       - "README.md"
       - "README_en.md"
-      - ".github/workflows/*"
   schedule:
     - cron: 0 8 * * 3
-  workflow_dispatch:
 
 env:
   TZ: Asia/Shanghai

@@ -4,6 +4,7 @@ on:
     paths-ignore:
       - "README.md"
       - "README_en.md"
+    branches: [main]
   schedule:
     - cron: 0 8 * * 3
 
@@ -29,7 +30,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with: # 将下述可执行文件 release 上去
-          tag: weekly
+          tag_name: weekly
           files: |
             ~/caddy
             ~/go/bin/sing-box

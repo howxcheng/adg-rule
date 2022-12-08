@@ -12,29 +12,14 @@ application:
   rule:
     #远程规则
     remote:
-      - "https://easylist-downloads.adblockplus.org/easyprivacy.txt"
-      - "https://easylist-downloads.adblockplus.org/easylist.txt"
-      - "https://easylist-downloads.adblockplus.org/easylistchina.txt"
-      - "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt"
-      - "https://www.i-dont-care-about-cookies.eu/abp/"
-      - "https://easylist.to/easylist/easylist.txt"
-      - "https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/rule.txt"
-      - "https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/mv.txt"
-      - "https://cdn.jsdelivr.net/gh/hoshsadiq/adblock-nocoin-list/hosts.txt" #adblock-nocoin-list
-      - "https://cdn.jsdelivr.net/gh/durablenapkin/scamblocklist/adguard.txt" #Scam Blocklist
-      - "https://someonewhocares.org/hosts/zero/hosts" #Dan Pollock's List
-      - "https://cdn.jsdelivr.net/gh/AdguardTeam/FiltersRegistry/filters/filter_15_DnsFilter/filter.txt" #AdGuard DNS filter
-      - "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext" #Peter Lowe's List
-      - "https://abp.oisd.nl/basic/" #OISD Blocklist Basic
-      - "https://adaway.org/hosts.txt" #AdAway Default Blocklist
-      - "https://cdn.jsdelivr.net/gh/crazy-max/WindowsSpyBlocker/data/hosts/spy.txt" #WindowsSpyBlocker
-      - "https://cdn.jsdelivr.net/gh/o0HalfLife0o/list@master/ad-pc.txt" #HalfLife（pc）
-      - "https://cdn.jsdelivr.net/gh/banbendalao/ADgk@master/ADgk.txt" #Adgk
-      - "https://cdn.jsdelivr.net/gh/VeleSila/yhosts/hosts.txt" #yhosts
-      - "https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts" #大圣净化
-      - "https://gitlab.com/quidsup/notrack-blocklists/-/raw/master/trackers.list" #Domains classified as tracking or advertising
-      - "https://code.gitlink.org.cn/hacamer/AdRules/raw/branch/main/adguard-full.txt" #AdRules AdGuard Full List
-      - "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt" #adguard base
+      - https://easylist-downloads.adblockplus.org/easylist.txt
+      - https://easylist-downloads.adblockplus.org/easylistchina.txt
+      - https://easylist-downloads.adblockplus.org/easyprivacy.txt
+      - https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/mv.txt
+      - https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/rule.txt
+      - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt
+      - https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt
+      - https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-ublock.txt
     #本地规则
     local: #本地规则请将文件移动到项目路径rule目录中
       - "mylist.txt"

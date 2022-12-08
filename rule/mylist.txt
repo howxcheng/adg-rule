@@ -1,7 +1,4 @@
 !-------------白名单---------------
-#自定义域名
-@@||ad.nakochen.xyz^$important
-
 #图床
 @@||pic.imgdb.cn
 

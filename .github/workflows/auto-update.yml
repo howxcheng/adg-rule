@@ -4,7 +4,6 @@ on:
     paths-ignore:
       - "README.md"
       - "README_en.md"
-      - ".github/workflows/*"
     branches: [main]
   schedule:
     - cron: 0 8 */3 * 0

@@ -18,11 +18,12 @@ application:
       - https://easylist-downloads.adblockplus.org/easylistchina.txt
       - https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts
       - https://raw.githubusercontent.com/Goooler/1024_hosts/master/hosts
+      - https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-ublock.txt
       - https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/mv.txt
       - https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/rule.txt
-      - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt
       - https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt
-      - https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-ublock.txt
+      - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt
+      - https://gist.githubusercontent.com/Ewpratten/a25ae63a7200c02c850fede2f32453cf/raw/b9318009399b99e822515d388b8458557d828c37/hosts-yt-ads
     #本地规则
     local: #本地规则请将文件移动到项目路径rule目录中
       - "mylist.txt"

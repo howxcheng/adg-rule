@@ -13,9 +13,16 @@ application:
     #远程规则
     remote:
       - https://www.i-dont-care-about-cookies.eu/abp/
+      - https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+      - https://malware-filter.gitlab.io/malware-filter/phishing-filter-agh.txt
       - https://easylist-downloads.adblockplus.org/easylist.txt
       - https://easylist-downloads.adblockplus.org/easyprivacy.txt
       - https://easylist-downloads.adblockplus.org/easylistchina.txt
+      - https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
+      - https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt
+      - https://gist.githubusercontent.com/Ewpratten/a25ae63a7200c02c850fede2f32453cf/raw/b9318009399b99e822515d388b8458557d828c37/hosts-yt-ads
+      - https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt
+      - https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt
       - https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts
       - https://raw.githubusercontent.com/Goooler/1024_hosts/master/hosts
       - https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt
@@ -27,29 +34,14 @@ application:
       - https://raw.githubusercontent.com/o0HalfLife0o/list/master/ad-pc.txt
       - https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt
       - https://raw.githubusercontent.com/zsakvo/AdGuard-Custom-Rule/master/rule/zhihu.txt
-      - https://gist.githubusercontent.com/Ewpratten/a25ae63a7200c02c850fede2f32453cf/raw/b9318009399b99e822515d388b8458557d828c37/hosts-yt-ads
-      - https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
-      - https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt
+      - https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt
     #本地规则
     local: #本地规则请将文件移动到项目路径rule目录中
       - "mylist.txt"
   output:
     path: rule #规则文件输出路径，相对路径默认从 项目目录开始
     files:
-      # all.txt: #输出文件名
-      #   - DOMAIN #域名规则，仅完整域名
-      #   - REGEX #正则规则，包含正则的域名规则，AdGH支持
-      #   - MODIFY #修饰规则，添加了一些修饰符号的规则，AdG支持
-      #   - HOSTS #Hosts规则
       rules.txt:
         - DOMAIN
         - REGEX
         - HOSTS
-      # hosts.txt:
-      #   - HOSTS
-      # regex.txt:
-      #   - REGEX
-      # domain.txt:
-      #   - DOMAIN
-      # modify.txt:
-      #   - MODIFY

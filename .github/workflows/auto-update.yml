@@ -5,8 +5,8 @@ on:
       - "README.md"
       - "README_en.md"
     branches: [main]
-#   schedule:
-#     - cron: 0 8 */3 * 0
+  schedule:
+    - cron: 0 16 * * 0,2,4
   workflow_dispatch:
 
 env:

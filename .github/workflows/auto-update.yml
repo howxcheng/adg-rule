@@ -38,6 +38,7 @@ jobs:
           tag_name: weekly
           files: |
             ./rule/rules.txt
+            ./rule/all.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
